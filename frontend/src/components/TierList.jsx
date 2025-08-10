@@ -22,9 +22,17 @@ function TierList() {
   const [selectedAlgorithm, setSelectedAlgorithm] = useState(null);
 
   useEffect(() => {
-    fetch('/data/algorithms.json')
-      .then(res => res.json())
+    console.log('Fetching algorithms...');
+    fetch('/tier-list/data/algorithms.json')
+      .then(res => {
+        console.log('Fetch response:', res.status, res.statusText);
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
       .then(data => {
+        console.log('Loaded algorithms:', data);
         setAlgorithms(data);
         const savedTiers = localStorage.getItem('tierList');
         if (savedTiers) {
@@ -40,8 +48,12 @@ function TierList() {
           setTiers(initialTiers);
           setUnranked(data);
         }
+        console.log('Set unranked algorithms:', data);
       })
-      .catch(err => console.error('Failed to load algorithms:', err));
+      .catch(err => {
+        console.error('Failed to load algorithms:', err);
+        console.error('Error details:', err.message);
+      });
   }, []);
 
   const saveTiers = (newTiers) => {

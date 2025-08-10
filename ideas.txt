@@ -1,0 +1,6 @@
+Ideas for "interesting facts"
+
+- historical facts (Dijkstra's first implementation lacked a heap)
+- facts about the creator (Hoare got Turing prize)
+- use in practice (A* algorithm is a practical variant of Dijkstra that's behind many path-finding algorithms)
+- 

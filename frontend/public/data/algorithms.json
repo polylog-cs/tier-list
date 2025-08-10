@@ -1,50 +1,202 @@
 [
   {
+    "id": "bfs-dijkstra",
+    "title": "BFS/Dijkstra",
+    "year": "1945/1959",
+    "author": "Zuse/Moore; Dijkstra",
+    "timeComplexity": "O(V + E) / O((V + E) \\log V)",
+    "image": "/tier-list/thumb/bfs-dijkstra.png",
+    "imageSource": "https://gist.github.com/kira924age/c14ec7424a966d1e48a9b601289907f0",
+    "descriptionPath": "/tier-list/descriptions/bfs-dijkstra.md"
+  },
+  {
+    "id": "dfs",
+    "title": "DFS",
+    "year": "19th century",
+    "author": "Trémaux et al.",
+    "timeComplexity": "O(V + E)",
+    "image": "/tier-list/thumb/dfs.png",
+    "imageSource": "https://gist.github.com/kira924age/c14ec7424a966d1e48a9b601289907f0",
+    "descriptionPath": "/tier-list/descriptions/dfs.md"
+  },
+  {
     "id": "quicksort",
     "title": "Quicksort",
-    "image": "/images/quicksort.svg",
-    "descriptionPath": "/descriptions/quicksort.md"
+    "year": "1959/1961",
+    "author": "Hoare",
+    "timeComplexity": "O(n \\log n)",
+    "image": "/tier-list/thumb/quicksort.png",
+    "imageSource": "https://idea-instructions.com/quick-sort/",
+    "descriptionPath": "/tier-list/descriptions/quicksort.md"
   },
   {
     "id": "mergesort",
-    "title": "Merge Sort",
-    "image": "/images/mergesort.svg",
-    "descriptionPath": "/descriptions/mergesort.md"
+    "title": "Mergesort",
+    "year": "1945",
+    "author": "von Neumann",
+    "timeComplexity": "O(n \\log n)",
+    "image": "/tier-list/thumb/mergesort.png",
+    "imageSource": "https://idea-instructions.com/",
+    "descriptionPath": "/tier-list/descriptions/mergesort.md"
   },
   {
-    "id": "heapsort",
-    "title": "Heapsort",
-    "image": "/images/heapsort.svg",
-    "descriptionPath": "/descriptions/heapsort.md"
+    "id": "heaps-heapsort",
+    "title": "Heaps/Heapsort",
+    "year": "1964",
+    "author": "Williams; Floyd",
+    "timeComplexity": "O(n \\log n)",
+    "image": "/tier-list/thumb/heaps-heapsort.png",
+    "imageSource": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Max-Heap-new.svg",
+    "descriptionPath": "/tier-list/descriptions/heaps-heapsort.md"
   },
   {
     "id": "bubblesort",
     "title": "Bubble Sort",
-    "image": "/images/bubblesort.svg",
-    "descriptionPath": "/descriptions/bubblesort.md"
+    "year": "1956",
+    "author": "Friend",
+    "timeComplexity": "O(n^2)",
+    "image": "/tier-list/thumb/bubblesort.png",
+    "imageSource": "https://en.wikipedia.org/wiki/Bubble_sort",
+    "descriptionPath": "/tier-list/descriptions/bubblesort.md"
   },
   {
-    "id": "dijkstra",
-    "title": "Dijkstra's Algorithm",
-    "image": "/images/dijkstra.svg",
-    "descriptionPath": "/descriptions/dijkstra.md"
+    "id": "bucketsort-radixsort",
+    "title": "Bucketsort/Radixsort",
+    "year": "1887/1954",
+    "author": "Hollerith/Seward",
+    "timeComplexity": "O(n + k) / O(d(n + k))",
+    "image": "/tier-list/thumb/bucketsort-radixsort.png",
+    "imageSource": "https://www.youtube.com/@polylogCS",
+    "descriptionPath": "/tier-list/descriptions/bucketsort-radixsort.md"
   },
   {
-    "id": "astar",
-    "title": "A* Search",
-    "image": "/images/astar.svg",
-    "descriptionPath": "/descriptions/astar.md"
+    "id": "kmp-aho-corasick",
+    "title": "KMP / Aho-Corasick",
+    "year": "1977/1975",
+    "author": "Knuth, Morris, Pratt / Aho, Corasick",
+    "timeComplexity": "O(n + m) / O(n + z)",
+    "image": "/tier-list/thumb/kmp-aho-corasick.png",
+    "imageSource": "https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm",
+    "descriptionPath": "/tier-list/descriptions/kmp-aho-corasick.md"
   },
   {
-    "id": "bfs",
-    "title": "Breadth-First Search",
-    "image": "/images/bfs.svg",
-    "descriptionPath": "/descriptions/bfs.md"
+    "id": "hash-tables",
+    "title": "Hash Tables",
+    "year": "1953-1956",
+    "author": "Luhn; Amdahl et al.; Dumey",
+    "timeComplexity": "O(1)",
+    "image": "/tier-list/images/hash-tables.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/hash-tables.md"
   },
   {
-    "id": "dfs",
-    "title": "Depth-First Search",
-    "image": "/images/dfs.svg",
-    "descriptionPath": "/descriptions/dfs.md"
+    "id": "binary-search-trees",
+    "title": "Binary Search Trees",
+    "year": "1960-1962",
+    "author": "Windley; Hibbard",
+    "timeComplexity": "O(\\log n)",
+    "image": "/tier-list/thumb/binary-search-trees.png",
+    "imageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/1280px-Binary_search_tree.svg.png",
+    "descriptionPath": "/tier-list/descriptions/binary-search-trees.md"
+  },
+  {
+    "id": "euclid",
+    "title": "Euclid Algorithm",
+    "year": "c. 300 BCE",
+    "author": "Euclid",
+    "timeComplexity": "O(\\log \\min(a,b))",
+    "image": "/tier-list/thumb/euclid.png",
+    "imageSource": "https://medium.com/i-math/why-does-the-euclidean-algorithm-work-aaf43bd3288e",
+    "descriptionPath": "/tier-list/descriptions/euclid.md"
+  },
+  {
+    "id": "sieve-eratosthenes",
+    "title": "Sieve of Eratosthenes",
+    "year": "3rd century BCE",
+    "author": "Eratosthenes",
+    "timeComplexity": "O(n \\log \\log n)",
+    "image": "/tier-list/thumb/sieve-eratosthenes.png",
+    "imageSource": "https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#/media/File:Animation_Sieve_of_Eratosth.gif",
+    "descriptionPath": "/tier-list/descriptions/sieve-eratosthenes.md"
+  },
+  {
+    "id": "karatsuba-strassen",
+    "title": "Karatsuba's Multiplication, Strassen Algorithm",
+    "year": "1962/1969",
+    "author": "Karatsuba, Ofman / Strassen",
+    "timeComplexity": "O(n^{\\log_2 3}) / O(n^{\\log_2 7})",
+    "image": "/tier-list/images/karatsuba-strassen.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/karatsuba-strassen.md"
+  },
+  {
+    "id": "fft",
+    "title": "FFT",
+    "year": "1965",
+    "author": "Cooley, Tukey",
+    "timeComplexity": "O(n \\log n)",
+    "image": "/tier-list/images/fft.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/fft.md"
+  },
+  {
+    "id": "edit-distance",
+    "title": "Edit Distance",
+    "year": "1965/1974",
+    "author": "Levenshtein; Wagner, Fischer",
+    "timeComplexity": "O(m \\cdot n)",
+    "image": "/tier-list/images/edit-distance.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/edit-distance.md"
+  },
+  {
+    "id": "graham-scan",
+    "title": "Graham Scan",
+    "year": "1972",
+    "author": "Graham",
+    "timeComplexity": "O(n \\log n)",
+    "image": "/tier-list/images/graham-scan.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/graham-scan.md"
+  },
+  {
+    "id": "gradient-descent",
+    "title": "Gradient Descent",
+    "year": "1847",
+    "author": "Cauchy",
+    "timeComplexity": "O(n) per step",
+    "image": "/tier-list/images/gradient-descent.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/gradient-descent.md"
+  },
+  {
+    "id": "k-means",
+    "title": "K-means",
+    "year": "1957/1982",
+    "author": "Lloyd; MacQueen",
+    "timeComplexity": "O(n \\cdot k \\cdot d \\cdot I)",
+    "image": "/tier-list/images/k-means.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/k-means.md"
+  },
+  {
+    "id": "bogosort",
+    "title": "Bogosort",
+    "year": "1990s folklore",
+    "author": "—",
+    "timeComplexity": "Θ(n \\cdot n!)",
+    "image": "/tier-list/thumb/bogosort.png",
+    "imageSource": "https://idea-instructions.com/",
+    "descriptionPath": "/tier-list/descriptions/bogosort.md"
+  },
+  {
+    "id": "backpropagation",
+    "title": "Backpropagation",
+    "year": "1974/1986",
+    "author": "Werbos; Rumelhart, Hinton, Williams",
+    "timeComplexity": "O(n \\cdot m \\cdot L)",
+    "image": "/tier-list/images/backpropagation.svg",
+    "imageSource": null,
+    "descriptionPath": "/tier-list/descriptions/backpropagation.md"
   }
 ]

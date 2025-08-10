@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { InlineMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
 import './AlgorithmTooltip.css';
 
 function AlgorithmTooltip({ algorithm, onClose }) {
@@ -23,16 +25,43 @@ function AlgorithmTooltip({ algorithm, onClose }) {
       <div className="algorithm-tooltip">
         <button className="close-button" onClick={onClose}>×</button>
         <div className="tooltip-content">
-          <img 
-            src={algorithm.image} 
-            alt={algorithm.title}
-            className="tooltip-image" 
-          />
-          <div className="tooltip-info">
-            <h2>{algorithm.title}</h2>
-            <div className="tooltip-description">
-              <ReactMarkdown>{description}</ReactMarkdown>
+          <h2>{algorithm.title}</h2>
+          
+          {algorithm.imageSource ? (
+            <img 
+              src={algorithm.image} 
+              alt={algorithm.title}
+              className="tooltip-image clickable-image" 
+              onClick={() => window.open(algorithm.imageSource, '_blank')}
+              title="Click to view image source"
+            />
+          ) : (
+            <img 
+              src={algorithm.image} 
+              alt={algorithm.title}
+              className="tooltip-image" 
+            />
+          )}
+          
+          <div className="algorithm-meta">
+            <div className="meta-item">
+              <strong>Year:</strong> {algorithm.year || 'Unknown'}
             </div>
+            <div className="meta-item">
+              <strong>Author:</strong> {algorithm.author || 'Unknown'}
+            </div>
+            <div className="meta-item">
+              <strong>Time Complexity:</strong> {' '}
+              {algorithm.timeComplexity ? (
+                <InlineMath math={algorithm.timeComplexity} />
+              ) : (
+                'Unknown'
+              )}
+            </div>
+          </div>
+
+          <div className="tooltip-description">
+            <ReactMarkdown>{description}</ReactMarkdown>
           </div>
         </div>
       </div>
