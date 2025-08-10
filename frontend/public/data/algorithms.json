@@ -1,0 +1,50 @@
+[
+  {
+    "id": "quicksort",
+    "title": "Quicksort",
+    "image": "/images/quicksort.svg",
+    "descriptionPath": "/descriptions/quicksort.md"
+  },
+  {
+    "id": "mergesort",
+    "title": "Merge Sort",
+    "image": "/images/mergesort.svg",
+    "descriptionPath": "/descriptions/mergesort.md"
+  },
+  {
+    "id": "heapsort",
+    "title": "Heapsort",
+    "image": "/images/heapsort.svg",
+    "descriptionPath": "/descriptions/heapsort.md"
+  },
+  {
+    "id": "bubblesort",
+    "title": "Bubble Sort",
+    "image": "/images/bubblesort.svg",
+    "descriptionPath": "/descriptions/bubblesort.md"
+  },
+  {
+    "id": "dijkstra",
+    "title": "Dijkstra's Algorithm",
+    "image": "/images/dijkstra.svg",
+    "descriptionPath": "/descriptions/dijkstra.md"
+  },
+  {
+    "id": "astar",
+    "title": "A* Search",
+    "image": "/images/astar.svg",
+    "descriptionPath": "/descriptions/astar.md"
+  },
+  {
+    "id": "bfs",
+    "title": "Breadth-First Search",
+    "image": "/images/bfs.svg",
+    "descriptionPath": "/descriptions/bfs.md"
+  },
+  {
+    "id": "dfs",
+    "title": "Depth-First Search",
+    "image": "/images/dfs.svg",
+    "descriptionPath": "/descriptions/dfs.md"
+  }
+]

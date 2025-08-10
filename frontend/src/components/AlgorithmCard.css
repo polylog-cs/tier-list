@@ -1,0 +1,54 @@
+.algorithm-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+
+.algorithm-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.algorithm-card.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.algorithm-card img {
+  width: 60px;
+  height: 45px;
+  margin-right: 12px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.algorithm-info {
+  flex: 1;
+}
+
+.algorithm-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.algorithm-description {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.3;
+}
+
+.algorithm-description p {
+  margin: 2px 0;
+}
+
+.algorithm-description strong {
+  color: #333;
+}
