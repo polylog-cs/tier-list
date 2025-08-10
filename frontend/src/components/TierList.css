@@ -83,8 +83,9 @@
   padding: 8px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  min-height: 76px;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 116px;
   transition: background 0.2s;
 }
 
@@ -109,8 +110,10 @@
   padding: 16px;
   display: flex;
   flex-wrap: wrap;
-  min-height: 100px;
+  gap: 8px;
+  min-height: 120px;
   transition: background 0.2s;
+  justify-content: flex-start;
 }
 
 .unranked-container.dragging-over {

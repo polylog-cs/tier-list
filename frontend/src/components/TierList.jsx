@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import AlgorithmCard from './AlgorithmCard';
+import AlgorithmTooltip from './AlgorithmTooltip';
 import './TierList.css';
 
 const TIERS = [
@@ -18,6 +19,7 @@ function TierList() {
   const [globalRankings, setGlobalRankings] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [apiUrl, setApiUrl] = useState('https://your-worker.workers.dev');
+  const [selectedAlgorithm, setSelectedAlgorithm] = useState(null);
 
   useEffect(() => {
     fetch('/data/algorithms.json')
@@ -147,24 +149,19 @@ function TierList() {
     setUnranked(algorithms);
   };
 
+  const handleCardClick = (algorithm) => {
+    setSelectedAlgorithm(algorithm);
+  };
+
+  const closeTooltip = () => {
+    setSelectedAlgorithm(null);
+  };
+
   return (
     <div className="tier-list-container">
       <header className="tier-list-header">
         <h1>Algorithm Tier List Maker</h1>
         <div className="controls">
-          <input
-            type="text"
-            placeholder="API URL"
-            value={apiUrl}
-            onChange={(e) => setApiUrl(e.target.value)}
-            className="api-url-input"
-          />
-          <button onClick={submitRankings} disabled={isLoading}>
-            Submit Rankings
-          </button>
-          <button onClick={fetchGlobalRankings} disabled={isLoading}>
-            Load Global Rankings
-          </button>
           <button onClick={resetTiers}>Reset</button>
         </div>
       </header>
@@ -197,6 +194,7 @@ function TierList() {
                             <AlgorithmCard 
                               algorithm={algo} 
                               isDragging={snapshot.isDragging}
+                              onCardClick={handleCardClick}
                             />
                           </div>
                         )}
@@ -230,6 +228,7 @@ function TierList() {
                         <AlgorithmCard 
                           algorithm={algo} 
                           isDragging={snapshot.isDragging}
+                          onCardClick={handleCardClick}
                         />
                       </div>
                     )}
@@ -242,24 +241,12 @@ function TierList() {
         </div>
       </DragDropContext>
 
-      {Object.keys(globalRankings).length > 0 && (
-        <div className="global-rankings">
-          <h2>Global Rankings</h2>
-          <div className="rankings-grid">
-            {Object.entries(globalRankings)
-              .sort((a, b) => b[1].average - a[1].average)
-              .map(([algoId, stats]) => {
-                const algo = algorithms.find(a => a.id === algoId);
-                if (!algo) return null;
-                return (
-                  <div key={algoId} className="ranking-item">
-                    <span>{algo.title}</span>
-                    <span>⭐ {stats.average.toFixed(2)} ({stats.votes} votes)</span>
-                  </div>
-                );
-              })}
-          </div>
-        </div>
+      
+      {selectedAlgorithm && (
+        <AlgorithmTooltip 
+          algorithm={selectedAlgorithm} 
+          onClose={closeTooltip} 
+        />
       )}
     </div>
   );
